@@ -1,0 +1,24 @@
+# Имя, которое видно на GitHub
+name: Проверка
+
+# Когда запускать: при каждом пуше
+on: [push]
+
+# Что делать
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Шаг 1: Скачать код
+      - uses: actions/checkout@v4
+      
+      # Шаг 2: Сказать "Привет"
+      - name: Приветствие
+        run: echo "Привет! Твой код проверяется..."
+      
+      # Шаг 3: Проверить YAML файл
+      - name: Проверка config.yml
+        run: |
+          echo "Проверяем файл config.yml..."
+          cat config.yml
+          echo "✅ Файл прочитан успешно!"

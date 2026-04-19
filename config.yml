@@ -1,0 +1,10 @@
+# Мой первый конфиг
+app:
+  name: "Мое приложение"
+  version: 1.0
+  debug: true
+
+# Настройки сервера
+server:
+  port: 3000
+  host: "localhost"
