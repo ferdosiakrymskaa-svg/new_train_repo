@@ -1,0 +1,10 @@
+name: Мой первый воркфлоу
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Проверка
+        run: echo "Привет! Воркфлоу работает!"
